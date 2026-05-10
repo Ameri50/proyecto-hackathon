@@ -466,6 +466,56 @@
       object-fit: contain;
     }
 
+    /* ── Logo móvil (solo visible en mobile) ── */
+    .hero-logo-mobile {
+      display: none;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 1.75rem;
+    }
+
+    .hero-logo-mobile-frame {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      background: var(--bg3);
+      border: 2px solid var(--border2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 0 40px rgba(124,106,247,0.2);
+    }
+
+    .hero-logo-mobile-frame::before {
+      content: '';
+      position: absolute;
+      inset: -2px;
+      border-radius: 50%;
+      background: conic-gradient(from 0deg, var(--accent), transparent 60%);
+      opacity: 0.5;
+      animation: spin-slow 8s linear infinite;
+      z-index: 0;
+    }
+
+    .hero-logo-mobile-frame::after {
+      content: '';
+      position: absolute;
+      inset: 2px;
+      border-radius: 50%;
+      background: var(--bg3);
+      z-index: 1;
+    }
+
+    .hero-logo-mobile-frame img {
+      width: 70%;
+      height: 70%;
+      object-fit: contain;
+      position: relative;
+      z-index: 2;
+    }
+
     /* ── SECTION HELPERS ── */
     section { position: relative; z-index: 1; }
     .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
@@ -875,7 +925,11 @@
         text-align: center;
         gap: 2rem;
       }
+
+      /* Ocultar el anillo giratorio en mobile, mostrar logo compacto */
       .hero-visual { display: none; }
+      .hero-logo-mobile { display: flex; }
+
       .hero-subtitle { margin: 0 auto 2rem; }
       .hero-meta { justify-content: center; }
       .hero-cta { display: inline-flex; }
@@ -933,6 +987,9 @@
       .registro-card { padding: 1.25rem; }
       .section-title { font-size: 1.6rem; }
       .hero-badge { font-size: 0.7rem; }
+
+      /* Logo móvil más pequeño en pantallas muy pequeñas */
+      .hero-logo-mobile-frame { width: 90px; height: 90px; }
     }
   </style>
 </head>
@@ -1005,6 +1062,13 @@
   <div class="hero-orb hero-orb-3"></div>
   <div class="hero-inner">
     <div>
+      <!-- Logo compacto solo visible en mobile, encima del badge -->
+      <div class="hero-logo-mobile">
+        <div class="hero-logo-mobile-frame">
+          <img src="/images/logohackathon.png" alt="Logo EduHack TECSUP">
+        </div>
+      </div>
+
       <div class="hero-badge">
         <span class="hero-badge-dot"></span>
         Evento oficial TECSUP 2025
@@ -1039,6 +1103,7 @@
         Registrarme ahora
       </a>
     </div>
+    <!-- Anillo giratorio grande — solo desktop -->
     <div class="hero-visual">
       <div class="hero-ring">
         <div class="hero-ring-inner">
