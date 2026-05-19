@@ -1,496 +1,703 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es" data-theme="dark">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#000000">
-  <meta name="description" content="Hackathon TECSUP 2025 - InnovaciÃ³n y tecnologÃ­a en acciÃ³n">
-  <title>EduHack 2025 Â· TECSUP</title>
+  <meta name="description" content="Hackathon TECSUP 2025 - Innovación y tecnología en acción">
+  <title>EduHack 2025 – TECSUP</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
-
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/index.css">
 </head>
+
 <body>
 
-<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+  <!-- ═══════════════════════════════════════
      SCROLL PROGRESS BAR
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
-<div id="scroll-progress"></div>
+  ══════════════════════════════════════════ -->
+  <div id="scroll-progress"></div>
 
-<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-     NAVBAR â€” FLOATING PILL
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
-<nav id="main-nav">
-  <div class="nav-inner">
+  <!-- ═══════════════════════════════════════
+     NAVBAR – FLOATING PILL
+  ══════════════════════════════════════════ -->
+  <nav id="main-nav">
+    <div class="nav-inner">
 
-    <!-- LOGO con imagen -->
-    <a href="#hero" class="nav-logo" aria-label="EduHack 2025 â€” Inicio">
-      <div class="nav-logo-img-wrap">
-        <img src="/images/logohackathon.png" alt="Logo EduHack TECSUP"
-          onerror="this.style.display='none'">
-      </div>
-      <div class="nav-logo-text">
-        <span class="nav-logo-name">EduHack</span>
-        <span class="nav-logo-sub">TECSUP Â· 2025</span>
-      </div>
-    </a>
-
-    <!-- LINKS desktop -->
-    <ul class="nav-links" id="nav-links">
-      <div class="nav-pill" id="nav-pill"></div>
-      <li><a href="#hero"      data-section="hero">Inicio</a></li>
-      <li><a href="#desafios"  data-section="desafios">DesafÃ­os</a></li>
-      <li><a href="#premios"   data-section="premios">Premios</a></li>
-      <li><a href="#criterios" data-section="criterios">Criterios</a></li>
-      <li><a href="#bases"     data-section="bases">Bases</a></li>
-    </ul>
-
-    <!-- DERECHA: CTA + iconos -->
-    <div style="display:flex;align-items:center;gap:0.6rem;">
-      <a href="#registro" class="nav-cta">
-        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-        Registro
+      <!-- LOGO con imagen -->
+      <a href="#hero" class="nav-logo" aria-label="EduHack 2025 – Inicio">
+        <div class="nav-logo-img-wrap">
+          <img src="/images/logohackathon.png" alt="Logo EduHack TECSUP" onerror="this.style.display='none'">
+        </div>
+        <div class="nav-logo-text">
+          <span class="nav-logo-name">EduHack</span>
+          <span class="nav-logo-sub">TECSUP · 2025</span>
+        </div>
       </a>
 
-      <div class="nav-actions">
-        <button class="icon-btn" id="theme-toggle" aria-label="Cambiar tema" title="Cambiar tema">
-          <svg class="icon-sun" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="5"/>
-            <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-            <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-          </svg>
-          <svg class="icon-moon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-          </svg>
-        </button>
+      <!-- LINKS desktop -->
+      <ul class="nav-links" id="nav-links">
+        <div class="nav-pill" id="nav-pill"></div>
+        <li><a href="#hero" data-section="hero">Inicio</a></li>
+        <li><a href="#desafios" data-section="desafios">Desafíos</a></li>
+        <li><a href="#premios" data-section="premios">Premios</a></li>
+        <li><a href="#criterios" data-section="criterios">Criterios</a></li>
+        <li><a href="#bases" data-section="bases">Bases</a></li>
+      </ul>
 
-        <div class="search-wrap">
-          <button class="icon-btn" id="search-toggle" aria-label="Buscar">
-            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+      <!-- DERECHA: CTA + iconos -->
+      <div style="display:flex;align-items:center;gap:0.6rem;">
+        <a href="#registro" class="nav-cta">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+          Registro
+        </a>
+
+        <div class="nav-actions">
+          <button class="icon-btn" id="theme-toggle" aria-label="Cambiar tema" title="Cambiar tema">
+            <svg class="icon-sun" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="5" />
+              <line x1="12" y1="1" x2="12" y2="3" />
+              <line x1="12" y1="21" x2="12" y2="23" />
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+              <line x1="1" y1="12" x2="3" y2="12" />
+              <line x1="21" y1="12" x2="23" y2="12" />
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+            </svg>
+            <svg class="icon-moon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
             </svg>
           </button>
-          <div class="search-box" id="search-box">
-            <div class="search-input-wrap">
-              <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2">
-                <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+
+          <div class="search-wrap">
+            <button class="icon-btn" id="search-toggle" aria-label="Buscar">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8" />
+                <line x1="21" y1="21" x2="16.65" y2="16.65" />
               </svg>
-              <input type="search" id="search-input" placeholder="Buscar secciÃ³n..." autocomplete="off">
-            </div>
-            <div class="search-results" id="search-results">
-              <p class="search-hint">Escribe para buscar...</p>
+            </button>
+            <div class="search-box" id="search-box">
+              <div class="search-input-wrap">
+                <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2">
+                  <circle cx="11" cy="11" r="8" />
+                  <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                </svg>
+                <input type="search" id="search-input" placeholder="Buscar sección..." autocomplete="off">
+              </div>
+              <div class="search-results" id="search-results">
+                <p class="search-hint">Escribe para buscar...</p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <button class="icon-btn hamburger" id="hamburger" aria-label="MenÃº">
-          <svg id="ham-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <line x1="3" y1="7"  x2="21" y2="7"/>
-            <line x1="3" y1="12" x2="21" y2="12"/>
-            <line x1="3" y1="17" x2="21" y2="17"/>
-          </svg>
-        </button>
+          <button class="icon-btn hamburger" id="hamburger" aria-label="Menú">
+            <svg id="ham-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="7" x2="21" y2="7" />
+              <line x1="3" y1="12" x2="21" y2="12" />
+              <line x1="3" y1="17" x2="21" y2="17" />
+            </svg>
+          </button>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- MENÃš MÃ“VIL -->
-  <div class="mobile-menu" id="mobile-menu">
-    <a href="#hero">Inicio</a>
-    <a href="#desafios">DesafÃ­os</a>
-    <a href="#premios">Premios</a>
-    <a href="#criterios">Criterios</a>
-    <a href="#bases">Bases</a>
-    <a href="#registro" class="mobile-cta">âš¡ Registrarme ahora</a>
-  </div>
-</nav>
+    <!-- MENÚ MÓVIL -->
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="#hero">Inicio</a>
+      <a href="#desafios">Desafíos</a>
+      <a href="#premios">Premios</a>
+      <a href="#criterios">Criterios</a>
+      <a href="#bases">Bases</a>
+      <a href="#registro" class="mobile-cta">⚡ Registrarme ahora</a>
+    </div>
+  </nav>
 
-<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+  <!-- ═══════════════════════════════════════
      HERO
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
-<section id="hero">
-  <div class="hero-orb hero-orb-1"></div>
-  <div class="hero-orb hero-orb-2"></div>
-  <div class="hero-orb hero-orb-3"></div>
-  <div class="hero-inner">
-    <div>
-      <div class="hero-logo-mobile">
-        <div class="hero-logo-mobile-frame">
-          <img src="/images/logohackathon.png" alt="Logo EduHack TECSUP">
+  ══════════════════════════════════════════ -->
+  <section id="hero">
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-orb hero-orb-3"></div>
+    <div class="hero-inner">
+      <div>
+        <div class="hero-logo-mobile">
+          <div class="hero-logo-mobile-frame">
+            <img src="/images/logohackathon.png" alt="Logo EduHack TECSUP">
+          </div>
         </div>
-      </div>
 
-      <div class="hero-badge">
-        <span class="hero-badge-dot"></span>
-        Evento oficial TECSUP 2025
-      </div>
-      <h1 class="hero-title">Hack<br>athon<br>2025</h1>
-      <p class="hero-subtitle">"EducaciÃ³n Superior sin deserciÃ³n estudiantil: El poder de los agentes de IA"</p>
-      <div class="hero-meta">
-        <div class="meta-chip">
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          Evento oficial TECSUP 2025
+        </div>
+        <h1 class="hero-title">Hack<br>athon<br>2025</h1>
+        <p class="hero-subtitle">"Educación Superior sin deserción estudiantil: El poder de los agentes de IA"</p>
+        <div class="hero-meta">
+          <div class="meta-chip">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="4" width="18" height="18" rx="2" />
+              <line x1="16" y1="2" x2="16" y2="6" />
+              <line x1="8" y1="2" x2="8" y2="6" />
+              <line x1="3" y1="10" x2="21" y2="10" />
+            </svg>
+            1 de noviembre
+          </div>
+          <div class="meta-chip">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="3" width="20" height="14" rx="2" />
+              <polyline points="8 21 12 17 16 21" />
+            </svg>
+            Modalidad Virtual
+          </div>
+        </div>
+        <div class="countdown-wrap">
+          <p class="countdown-label">Comienza en</p>
+          <div class="countdown-grid" id="countdown">
+            <div class="countdown-unit">
+              <div class="countdown-num" id="cd-days">--</div>
+              <div class="countdown-unit-label">Días</div>
+            </div>
+            <div class="countdown-unit">
+              <div class="countdown-num" id="cd-hours">--</div>
+              <div class="countdown-unit-label">Horas</div>
+            </div>
+            <div class="countdown-unit">
+              <div class="countdown-num" id="cd-mins">--</div>
+              <div class="countdown-unit-label">Min</div>
+            </div>
+            <div class="countdown-unit">
+              <div class="countdown-num" id="cd-secs">--</div>
+              <div class="countdown-unit-label">Seg</div>
+            </div>
+          </div>
+        </div>
+        <a href="#registro" class="hero-cta">
           <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+            <path d="M13 10V3L4 14h7v7l9-11h-7z" />
           </svg>
-          1 de noviembre
-        </div>
-        <div class="meta-chip">
-          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <rect x="2" y="3" width="20" height="14" rx="2"/><polyline points="8 21 12 17 16 21"/>
-          </svg>
-          Modalidad Virtual
-        </div>
+          Registrarme ahora
+        </a>
       </div>
-      <div class="countdown-wrap">
-        <p class="countdown-label">Comienza en</p>
-        <div class="countdown-grid" id="countdown">
-          <div class="countdown-unit"><div class="countdown-num" id="cd-days">--</div><div class="countdown-unit-label">DÃ­as</div></div>
-          <div class="countdown-unit"><div class="countdown-num" id="cd-hours">--</div><div class="countdown-unit-label">Horas</div></div>
-          <div class="countdown-unit"><div class="countdown-num" id="cd-mins">--</div><div class="countdown-unit-label">Min</div></div>
-          <div class="countdown-unit"><div class="countdown-num" id="cd-secs">--</div><div class="countdown-unit-label">Seg</div></div>
-        </div>
-      </div>
-      <a href="#registro" class="hero-cta">
-        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-        Registrarme ahora
-      </a>
-    </div>
-    <div class="hero-visual">
-      <div class="hero-ring">
-        <div class="hero-ring-inner">
-          <img src="/images/logohackathon.png" alt="Logo EduHack TECSUP">
+      <div class="hero-visual">
+        <div class="hero-ring">
+          <div class="hero-ring-inner">
+            <img src="/images/logohackathon.png" alt="Logo EduHack TECSUP">
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-     DESAFÃOS
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
-<section id="desafios">
-  <div class="divider"></div>
-  <div class="container section-pad">
-    <div class="section-header centered">
-      <p class="section-eyebrow">CategorÃ­as disponibles</p>
-      <h2 class="section-title">DesafÃ­os a resolver</h2>
-      <p class="section-desc">Elige uno de nuestros desafÃ­os innovadores y desarrolla una soluciÃ³n con agentes de IA para combatir la deserciÃ³n estudiantil.</p>
+  <!-- ═══════════════════════════════════════
+     DESAFÍOS
+  ══════════════════════════════════════════ -->
+  <section id="desafios">
+    <div class="divider"></div>
+    <div class="container section-pad">
+      <div class="section-header centered">
+        <p class="section-eyebrow">Categorías disponibles</p>
+        <h2 class="section-title">Desafíos a resolver</h2>
+        <p class="section-desc">Elige uno de nuestros desafíos innovadores y desarrolla una solución con agentes de IA
+          para combatir la deserción estudiantil.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card c-blue">
+          <div class="card-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg></div>
+          <div class="card-title">Asistente Virtual Académico</div>
+          <div class="card-desc">Agente de IA que acompañe al estudiante recordándole tareas, fechas de entrega y
+            brindando recomendaciones personalizadas según su desempeño.</div>
+          <div class="tags"><span class="tag">IA Conversacional</span><span class="tag">Personalización</span><span
+              class="tag">Analytics</span></div>
+        </div>
+        <div class="card c-rose">
+          <div class="card-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path
+                d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z" />
+            </svg></div>
+          <div class="card-title">Detección Temprana de Riesgo</div>
+          <div class="card-desc">Sistema de IA que analiza datos académicos y de comportamiento para identificar
+            estudiantes en riesgo y sugerir intervenciones oportunas.</div>
+          <div class="tags"><span class="tag">Machine Learning</span><span class="tag">Big Data</span><span
+              class="tag">Alertas</span></div>
+        </div>
+        <div class="card c-purple">
+          <div class="card-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path
+                d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+            </svg></div>
+          <div class="card-title">Tutor Virtual 24/7</div>
+          <div class="card-desc">Agente de IA con tutorías inmediatas en asignaturas críticas (matemáticas,
+            programación, escritura) adaptándose al nivel de cada estudiante.</div>
+          <div class="tags"><span class="tag">NLP</span><span class="tag">Ed. Adaptativa</span><span
+              class="tag">Tutorías</span></div>
+        </div>
+        <div class="card c-pink">
+          <div class="card-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path
+                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+            </svg></div>
+          <div class="card-title">Agente Motivacional y Bienestar</div>
+          <div class="card-desc">Solución de IA que monitorea el estado emocional del estudiante ofreciendo apoyo
+            motivacional y contacto con tutores cuando sea necesario.</div>
+          <div class="tags"><span class="tag">Sentiment Analysis</span><span class="tag">Bienestar</span><span
+              class="tag">Salud Mental</span></div>
+        </div>
+        <div class="card c-emerald">
+          <div class="card-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path
+                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg></div>
+          <div class="card-title">Plataforma de Mentoría Inteligente</div>
+          <div class="card-desc">Sistema que conecta estudiantes avanzados con ingresantes usando IA para hacer match
+            según intereses, carrera y necesidades académicas.</div>
+          <div class="tags"><span class="tag">Matching IA</span><span class="tag">Networking</span><span
+              class="tag">Comunidad</span></div>
+        </div>
+        <div class="card c-cyan">
+          <div class="card-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+            </svg></div>
+          <div class="card-title">Optimización de Ruta Académica</div>
+          <div class="card-desc">Agente de IA que sugiere itinerarios de cursos y recursos para mejorar la progresión
+            académica y evitar desmotivación por sobrecarga.</div>
+          <div class="tags"><span class="tag">Recomendación IA</span><span class="tag">Planificación</span><span
+              class="tag">Optimización</span></div>
+        </div>
+      </div>
+      <div class="context-box" style="margin-top: 3rem;">
+        <p class="section-eyebrow" style="margin-bottom: 1rem;">Contexto del desafío</p>
+        <h3
+          style="font-family: 'Outfit', sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--text); margin-bottom: 1rem;">
+          El Poder de los Agentes de IA</h3>
+        <p class="context-text">La deserción estudiantil es uno de los mayores retos de la educación superior. Las
+          principales causas incluyen <strong>dificultades académicas</strong>, <strong>emocionales</strong>,
+          <strong>sociales</strong> y <strong>económicas</strong>. Tu misión: desarrollar herramientas que brinden
+          <strong>acompañamiento</strong>, detecten <strong>riesgos tempranos</strong> y fortalezcan la
+          <strong>permanencia estudiantil</strong>.</p>
+        <p style="margin-top: 1.25rem; font-size: 0.9rem; color: var(--text3);">¿Tu propuesta no encaja exactamente?
+          <strong style="color: var(--accent2);">¡Preséntala igual!</strong> La innovación no tiene límites.</p>
+      </div>
     </div>
-    <div class="grid-3">
-      <div class="card c-blue">
-        <div class="card-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div>
-        <div class="card-title">Asistente Virtual AcadÃ©mico</div>
-        <div class="card-desc">Agente de IA que acompaÃ±e al estudiante recordÃ¡ndole tareas, fechas de entrega y brindando recomendaciones personalizadas segÃºn su desempeÃ±o.</div>
-        <div class="tags"><span class="tag">IA Conversacional</span><span class="tag">PersonalizaciÃ³n</span><span class="tag">Analytics</span></div>
-      </div>
-      <div class="card c-rose">
-        <div class="card-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"/></svg></div>
-        <div class="card-title">DetecciÃ³n Temprana de Riesgo</div>
-        <div class="card-desc">Sistema de IA que analiza datos acadÃ©micos y de comportamiento para identificar estudiantes en riesgo y sugerir intervenciones oportunas.</div>
-        <div class="tags"><span class="tag">Machine Learning</span><span class="tag">Big Data</span><span class="tag">Alertas</span></div>
-      </div>
-      <div class="card c-purple">
-        <div class="card-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg></div>
-        <div class="card-title">Tutor Virtual 24/7</div>
-        <div class="card-desc">Agente de IA con tutorÃ­as inmediatas en asignaturas crÃ­ticas (matemÃ¡ticas, programaciÃ³n, escritura) adaptÃ¡ndose al nivel de cada estudiante.</div>
-        <div class="tags"><span class="tag">NLP</span><span class="tag">Ed. Adaptativa</span><span class="tag">TutorÃ­as</span></div>
-      </div>
-      <div class="card c-pink">
-        <div class="card-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg></div>
-        <div class="card-title">Agente Motivacional y Bienestar</div>
-        <div class="card-desc">SoluciÃ³n de IA que monitorea el estado emocional del estudiante ofreciendo apoyo motivacional y contacto con tutores cuando sea necesario.</div>
-        <div class="tags"><span class="tag">Sentiment Analysis</span><span class="tag">Bienestar</span><span class="tag">Salud Mental</span></div>
-      </div>
-      <div class="card c-emerald">
-        <div class="card-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
-        <div class="card-title">Plataforma de MentorÃ­a Inteligente</div>
-        <div class="card-desc">Sistema que conecta estudiantes avanzados con ingresantes usando IA para hacer match segÃºn intereses, carrera y necesidades acadÃ©micas.</div>
-        <div class="tags"><span class="tag">Matching IA</span><span class="tag">Networking</span><span class="tag">Comunidad</span></div>
-      </div>
-      <div class="card c-cyan">
-        <div class="card-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg></div>
-        <div class="card-title">OptimizaciÃ³n de Ruta AcadÃ©mica</div>
-        <div class="card-desc">Agente de IA que sugiere itinerarios de cursos y recursos para mejorar la progresiÃ³n acadÃ©mica y evitar desmotivaciÃ³n por sobrecarga.</div>
-        <div class="tags"><span class="tag">RecomendaciÃ³n IA</span><span class="tag">PlanificaciÃ³n</span><span class="tag">OptimizaciÃ³n</span></div>
-      </div>
-    </div>
-    <div class="context-box" style="margin-top: 3rem;">
-      <p class="section-eyebrow" style="margin-bottom: 1rem;">Contexto del desafÃ­o</p>
-      <h3 style="font-family: Syne, sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--text); margin-bottom: 1rem;">El Poder de los Agentes de IA</h3>
-      <p class="context-text">La deserciÃ³n estudiantil es uno de los mayores retos de la educaciÃ³n superior. Las principales causas incluyen <strong>dificultades acadÃ©micas</strong>, <strong>emocionales</strong>, <strong>sociales</strong> y <strong>econÃ³micas</strong>. Tu misiÃ³n: desarrollar herramientas que brinden <strong>acompaÃ±amiento</strong>, detecten <strong>riesgos tempranos</strong> y fortalezcan la <strong>permanencia estudiantil</strong>.</p>
-      <p style="margin-top: 1.25rem; font-size: 0.9rem; color: var(--text3);">Â¿Tu propuesta no encaja exactamente? <strong style="color: var(--accent2);">Â¡PresÃ©ntala igual!</strong> La innovaciÃ³n no tiene lÃ­mites.</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+  <!-- ═══════════════════════════════════════
      PREMIOS
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
-<section id="premios" style="background: var(--bg2);">
-  <div class="divider"></div>
-  <div class="container section-pad">
-    <div class="section-header centered">
-      <p class="section-eyebrow">EduHack 2025</p>
-      <h2 class="section-title">Premios y Reconocimientos</h2>
-      <p class="section-desc">Premios en efectivo para los equipos ganadores que desarrollen las mejores soluciones de inteligencia artificial.</p>
+  ══════════════════════════════════════════ -->
+  <section id="premios" style="background: var(--bg2);">
+    <div class="divider"></div>
+    <div class="container section-pad">
+      <div class="section-header centered">
+        <p class="section-eyebrow">EduHack 2025</p>
+        <h2 class="section-title">Premios y Reconocimientos</h2>
+        <p class="section-desc">Premios en efectivo para los equipos ganadores que desarrollen las mejores soluciones de
+          inteligencia artificial.</p>
+      </div>
+      <div class="prizes-grid">
+        <div class="prize-card gold">
+          <div class="prize-icon">🥇</div>
+          <div class="prize-rank">1er Lugar</div>
+          <div class="prize-amount">S/ 2,500</div>
+          <div class="prize-sub">Premio por equipo</div>
+          <ul class="prize-perks">
+            <li class="prize-perk"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>Premio en efectivo por equipo</li>
+            <li class="prize-perk"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>Reconocimiento oficial TECSUP</li>
+            <li class="prize-perk"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>Difusión en canales institucionales</li>
+          </ul>
+        </div>
+        <div class="prize-card silver">
+          <div class="prize-icon">🥈</div>
+          <div class="prize-rank">2do Lugar</div>
+          <div class="prize-amount">S/ 1,000</div>
+          <div class="prize-sub">Premio por equipo</div>
+          <ul class="prize-perks">
+            <li class="prize-perk"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>Premio en efectivo por equipo</li>
+            <li class="prize-perk"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>Reconocimiento oficial TECSUP</li>
+            <li class="prize-perk"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>Difusión en canales institucionales</li>
+          </ul>
+        </div>
+        <div class="prize-card bronze">
+          <div class="prize-icon">🥉</div>
+          <div class="prize-rank">3er Lugar</div>
+          <div class="prize-amount">S/ 500</div>
+          <div class="prize-sub">Premio por equipo</div>
+          <ul class="prize-perks">
+            <li class="prize-perk"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>Premio en efectivo por equipo</li>
+            <li class="prize-perk"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>Reconocimiento oficial TECSUP</li>
+            <li class="prize-perk"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>Difusión en canales institucionales</li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <div class="prizes-grid">
-      <div class="prize-card gold">
-        <div class="prize-icon">ðŸ¥‡</div>
-        <div class="prize-rank">1er Lugar</div>
-        <div class="prize-amount">S/ 2,500</div>
-        <div class="prize-sub">Premio por equipo</div>
-        <ul class="prize-perks">
-          <li class="prize-perk"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Premio en efectivo por equipo</li>
-          <li class="prize-perk"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Reconocimiento oficial TECSUP</li>
-          <li class="prize-perk"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>DifusiÃ³n en canales institucionales</li>
-        </ul>
-      </div>
-      <div class="prize-card silver">
-        <div class="prize-icon">ðŸ¥ˆ</div>
-        <div class="prize-rank">2do Lugar</div>
-        <div class="prize-amount">S/ 1,000</div>
-        <div class="prize-sub">Premio por equipo</div>
-        <ul class="prize-perks">
-          <li class="prize-perk"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Premio en efectivo por equipo</li>
-          <li class="prize-perk"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Reconocimiento oficial TECSUP</li>
-          <li class="prize-perk"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>DifusiÃ³n en canales institucionales</li>
-        </ul>
-      </div>
-      <div class="prize-card bronze">
-        <div class="prize-icon">ðŸ¥‰</div>
-        <div class="prize-rank">3er Lugar</div>
-        <div class="prize-amount">S/ 500</div>
-        <div class="prize-sub">Premio por equipo</div>
-        <ul class="prize-perks">
-          <li class="prize-perk"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Premio en efectivo por equipo</li>
-          <li class="prize-perk"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Reconocimiento oficial TECSUP</li>
-          <li class="prize-perk"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>DifusiÃ³n en canales institucionales</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+  <!-- ═══════════════════════════════════════
      CRITERIOS
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
-<section id="criterios">
-  <div class="divider"></div>
-  <div class="container section-pad">
-    <div class="section-header centered">
-      <p class="section-eyebrow">EvaluaciÃ³n</p>
-      <h2 class="section-title">Criterios de EvaluaciÃ³n</h2>
-      <p class="section-desc">El jurado calificador de TECSUP evaluarÃ¡ los prototipos segÃºn estos criterios clave.</p>
-    </div>
-    <div class="criteria-grid">
-      <div class="criteria-card"><div class="criteria-icon">ðŸ’¡</div><div class="criteria-name">InnovaciÃ³n</div><div class="criteria-desc">Grado de originalidad y creatividad en la soluciÃ³n propuesta</div></div>
-      <div class="criteria-card"><div class="criteria-icon">âš¡</div><div class="criteria-name">Impacto</div><div class="criteria-desc">Potencial para mitigar la deserciÃ³n estudiantil en la educaciÃ³n superior</div></div>
-      <div class="criteria-card"><div class="criteria-icon">âœ…</div><div class="criteria-name">Factibilidad</div><div class="criteria-desc">Viabilidad tÃ©cnica y econÃ³mica de implementar la soluciÃ³n</div></div>
-      <div class="criteria-card"><div class="criteria-icon">ðŸŽ¯</div><div class="criteria-name">Usabilidad</div><div class="criteria-desc">Facilidad de uso y accesibilidad para los usuarios finales</div></div>
-      <div class="criteria-card"><div class="criteria-icon">ðŸ“ˆ</div><div class="criteria-name">Escalabilidad</div><div class="criteria-desc">Capacidad para ser ampliada en diferentes contextos y Ã¡reas geogrÃ¡ficas</div></div>
-    </div>
-    <div class="format-box">
-      <div class="format-item">
-        <div class="format-item-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-        <div><div class="format-item-title">DuraciÃ³n del Pitch</div><div class="format-item-desc">5 minutos mÃ¡ximo para presentar tu soluciÃ³n</div></div>
+  ══════════════════════════════════════════ -->
+  <section id="criterios">
+    <div class="divider"></div>
+    <div class="container section-pad">
+      <div class="section-header centered">
+        <p class="section-eyebrow">Evaluación</p>
+        <h2 class="section-title">Criterios de Evaluación</h2>
+        <p class="section-desc">El jurado calificador de TECSUP evaluará los prototipos según estos criterios clave.</p>
       </div>
-      <div class="format-item">
-        <div class="format-item-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
-        <div><div class="format-item-title">SesiÃ³n de Preguntas</div><div class="format-item-desc">3 minutos para responder preguntas del jurado</div></div>
+      <div class="criteria-grid">
+        <div class="criteria-card">
+          <div class="criteria-icon">💡</div>
+          <div class="criteria-name">Innovación</div>
+          <div class="criteria-desc">Grado de originalidad y creatividad en la solución propuesta</div>
+        </div>
+        <div class="criteria-card">
+          <div class="criteria-icon">🎯</div>
+          <div class="criteria-name">Impacto</div>
+          <div class="criteria-desc">Potencial para mitigar la deserción estudiantil en la educación superior</div>
+        </div>
+        <div class="criteria-card">
+          <div class="criteria-icon">🔧</div>
+          <div class="criteria-name">Factibilidad</div>
+          <div class="criteria-desc">Viabilidad técnica y económica de implementar la solución</div>
+        </div>
+        <div class="criteria-card">
+          <div class="criteria-icon">👤</div>
+          <div class="criteria-name">Usabilidad</div>
+          <div class="criteria-desc">Facilidad de uso y accesibilidad para los usuarios finales</div>
+        </div>
+        <div class="criteria-card">
+          <div class="criteria-icon">📈</div>
+          <div class="criteria-name">Escalabilidad</div>
+          <div class="criteria-desc">Capacidad para ser ampliada en diferentes contextos y áreas geográficas</div>
+        </div>
+      </div>
+      <div class="format-box">
+        <div class="format-item">
+          <div class="format-item-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10" />
+              <polyline points="12 6 12 12 16 14" />
+            </svg></div>
+          <div>
+            <div class="format-item-title">Duración del Pitch</div>
+            <div class="format-item-desc">5 minutos máximo para presentar tu solución</div>
+          </div>
+        </div>
+        <div class="format-item">
+          <div class="format-item-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+            </svg></div>
+          <div>
+            <div class="format-item-title">Sesión de Preguntas</div>
+            <div class="format-item-desc">3 minutos para responder preguntas del jurado</div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+  <!-- ═══════════════════════════════════════
      BASES
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
-<section id="bases" style="background: var(--bg2);">
-  <div class="divider"></div>
-  <div class="container section-pad">
-    <div class="section-header centered">
-      <p class="section-eyebrow">DocumentaciÃ³n oficial</p>
-      <h2 class="section-title">Bases del Hackathon</h2>
-      <p class="section-desc">Todo lo que necesitas saber para participar en el hackathon mÃ¡s emocionante del aÃ±o.</p>
-    </div>
-    <div class="bases-grid">
-      <div class="bases-card">
-        <div class="bases-card-icon" style="background: rgba(96,165,250,0.1); border: 1px solid rgba(96,165,250,0.2);">
-          <svg fill="none" viewBox="0 0 24 24" stroke="#60a5fa" stroke-width="2"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
-        </div>
-        <div class="bases-card-title">Bases Completas</div>
-        <div class="bases-card-desc">Documento oficial con todas las reglas y condiciones del hackathon.</div>
-        <a href="https://drive.google.com/file/d/15kURJYlorvdbMT0w5p3uy7Hie0BUoNLq/view?usp=sharing" target="_blank" rel="noopener" class="btn-primary c-blue-btn">
-          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-          Ver bases
-        </a>
-        <a href="https://drive.google.com/file/d/15kURJYlorvdbMT0w5p3uy7Hie0BUoNLq/view?usp=sharing" target="_blank" rel="noopener" class="btn-ghost c-blue-ghost">
-          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-          Descargar PDF
-        </a>
+  ══════════════════════════════════════════ -->
+  <section id="bases" style="background: var(--bg2);">
+    <div class="divider"></div>
+    <div class="container section-pad">
+      <div class="section-header centered">
+        <p class="section-eyebrow">Documentación oficial</p>
+        <h2 class="section-title">Bases del Hackathon</h2>
+        <p class="section-desc">Todo lo que necesitas saber para participar en el hackathon más emocionante del año.</p>
       </div>
-      <div class="bases-card">
-        <div class="bases-card-icon" style="background: rgba(251,146,60,0.1); border: 1px solid rgba(251,146,60,0.2);">
-          <svg fill="none" viewBox="0 0 24 24" stroke="#fb923c" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      <div class="bases-grid">
+        <div class="bases-card">
+          <div class="bases-card-icon"
+            style="background: rgba(96,165,250,0.1); border: 1px solid rgba(96,165,250,0.2);">
+            <svg fill="none" viewBox="0 0 24 24" stroke="#60a5fa" stroke-width="2">
+              <path
+                d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+            </svg>
+          </div>
+          <div class="bases-card-title">Bases Completas</div>
+          <div class="bases-card-desc">Documento oficial con todas las reglas y condiciones del hackathon.</div>
+          <a href="https://drive.google.com/file/d/15kURJYlorvdbMT0w5p3uy7Hie0BUoNLq/view?usp=sharing" target="_blank"
+            rel="noopener" class="btn-primary c-blue-btn">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+            Ver bases
+          </a>
+          <a href="https://drive.google.com/file/d/15kURJYlorvdbMT0w5p3uy7Hie0BUoNLq/view?usp=sharing" target="_blank"
+            rel="noopener" class="btn-ghost c-blue-ghost">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path
+                d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            Descargar PDF
+          </a>
         </div>
-        <div class="bases-card-title">Cronograma 2025</div>
-        <div class="bases-card-desc">Calendario detallado con todas las fechas y actividades del evento.</div>
-        <a href="https://drive.google.com/file/d/1h3cTnrcklBstsmN9cIFoY4TwlVpQ5uWs/view" target="_blank" rel="noopener" class="btn-primary c-orange-btn">
-          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-          Ver cronograma
-        </a>
-        <a href="https://drive.google.com/file/d/1h3cTnrcklBstsmN9cIFoY4TwlVpQ5uWs/view" target="_blank" rel="noopener" class="btn-ghost c-orange-ghost">
-          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-          Descargar Excel
-        </a>
+        <div class="bases-card">
+          <div class="bases-card-icon"
+            style="background: rgba(251,146,60,0.1); border: 1px solid rgba(251,146,60,0.2);">
+            <svg fill="none" viewBox="0 0 24 24" stroke="#fb923c" stroke-width="2">
+              <rect x="3" y="4" width="18" height="18" rx="2" />
+              <line x1="16" y1="2" x2="16" y2="6" />
+              <line x1="8" y1="2" x2="8" y2="6" />
+              <line x1="3" y1="10" x2="21" y2="10" />
+            </svg>
+          </div>
+          <div class="bases-card-title">Cronograma 2025</div>
+          <div class="bases-card-desc">Calendario detallado con todas las fechas y actividades del evento.</div>
+          <a href="https://drive.google.com/file/d/1h3cTnrcklBstsmN9cIFoY4TwlVpQ5uWs/view" target="_blank"
+            rel="noopener" class="btn-primary c-orange-btn">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+            Ver cronograma
+          </a>
+          <a href="https://drive.google.com/file/d/1h3cTnrcklBstsmN9cIFoY4TwlVpQ5uWs/view" target="_blank"
+            rel="noopener" class="btn-ghost c-orange-ghost">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path
+                d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            Descargar Excel
+          </a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+  <!-- ═══════════════════════════════════════
      REGISTRO
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
-<section id="registro">
-  <div class="divider"></div>
-  <div class="container section-pad">
-    <div class="section-header centered">
-      <p class="section-eyebrow">Â¡Ãšnete al EduHack 2025!</p>
-      <h2 class="section-title">Formulario de Registro</h2>
-      <p class="section-desc">RegÃ­strate y asegura tu lugar. Completa tus datos para participar en EduHack 2025 de TECSUP.</p>
-    </div>
-    <div class="registro-grid" style="max-width: 900px; margin: 0 auto;">
-      <div class="registro-card">
-        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
-          <div class="card-icon" style="background: rgba(96,165,250,0.1); border-color: rgba(96,165,250,0.2); color: #60a5fa; margin: 0; width: 40px; height: 40px;">
-            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-          </div>
-          <span style="font-family: Syne, sans-serif; font-weight: 700; font-size: 1.05rem; color: var(--text);">ðŸ“‹ Datos de Registro</span>
-        </div>
-        <p style="font-size: 0.85rem; color: var(--text2); margin-bottom: 0.75rem;">Completa el formulario oficial de Google Forms</p>
-        <div class="iframe-wrap">
-          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe71vePaPbtbnz6yAlWjYRs9sp5jnNnhTHjIG0_m19hI7subQ/viewform?embedded=true" width="100%" height="340" frameborder="0" marginheight="0" marginwidth="0">Cargandoâ€¦</iframe>
-        </div>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe71vePaPbtbnz6yAlWjYRs9sp5jnNnhTHjIG0_m19hI7subQ/viewform" target="_blank" rel="noopener" class="btn-primary c-blue-btn" style="margin-top: 0.5rem;">
-          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
-          Completar formulario completo
-        </a>
+  ══════════════════════════════════════════ -->
+  <section id="registro">
+    <div class="divider"></div>
+    <div class="container section-pad">
+      <div class="section-header centered">
+        <p class="section-eyebrow">¡Únete al EduHack 2025!</p>
+        <h2 class="section-title">Formulario de Registro</h2>
+        <p class="section-desc">Regístrate y asegura tu lugar. Completa tus datos para participar en EduHack 2025 de
+          TECSUP.</p>
       </div>
-      <div class="registro-card registro-card-qr">
-        <div style="display: flex; align-items: center; gap: 0.75rem;">
-          <div class="card-icon" style="background: rgba(167,139,250,0.1); border-color: rgba(167,139,250,0.2); color: #a78bfa; margin: 0; width: 40px; height: 40px;">
-            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+      <div class="registro-grid" style="max-width: 900px; margin: 0 auto;">
+        <div class="registro-card">
+          <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+            <div class="card-icon"
+              style="background: rgba(96,165,250,0.1); border-color: rgba(96,165,250,0.2); color: #60a5fa; margin: 0; width: 40px; height: 40px;">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+            </div>
+            <span
+              style="font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 1.05rem; color: var(--text);">📋
+              Datos de Registro</span>
           </div>
-          <span style="font-family: Syne, sans-serif; font-weight: 700; font-size: 1.05rem; color: var(--text);">ðŸ“± Acceso RÃ¡pido</span>
+          <p style="font-size: 0.85rem; color: var(--text2); margin-bottom: 0.75rem;">Completa el formulario oficial de
+            Google Forms</p>
+          <div class="iframe-wrap">
+            <iframe
+              src="https://docs.google.com/forms/d/e/1FAIpQLSe71vePaPbtbnz6yAlWjYRs9sp5jnNnhTHjIG0_m19hI7subQ/viewform?embedded=true"
+              width="100%" height="340" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+          </div>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSe71vePaPbtbnz6yAlWjYRs9sp5jnNnhTHjIG0_m19hI7subQ/viewform"
+            target="_blank" rel="noopener" class="btn-primary c-blue-btn" style="margin-top: 0.5rem;">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path
+                d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+            </svg>
+            Completar formulario completo
+          </a>
         </div>
-        <p style="font-size: 0.85rem; color: var(--text2);">Escanea para registrarte desde tu celular</p>
-        <div class="qr-frame">
-          <img src="images/qr.png" alt="QR code para el formulario de registro EduHack 2025" loading="lazy">
+        <div class="registro-card registro-card-qr">
+          <div style="display: flex; align-items: center; gap: 0.75rem;">
+            <div class="card-icon"
+              style="background: rgba(167,139,250,0.1); border-color: rgba(167,139,250,0.2); color: #a78bfa; margin: 0; width: 40px; height: 40px;">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <span
+              style="font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 1.05rem; color: var(--text);">📱
+              Acceso Rápido</span>
+          </div>
+          <p style="font-size: 0.85rem; color: var(--text2);">Escanea para registrarte desde tu celular</p>
+          <div class="qr-frame">
+            <img src="images/qr.png" alt="QR code para el formulario de registro EduHack 2025" loading="lazy">
+          </div>
+          <div>
+            <p style="font-size: 0.875rem; font-weight: 600; color: var(--text); margin-bottom: 0.3rem;">¿Sin acceso al
+              formulario?</p>
+            <p style="font-size: 0.8rem; color: var(--text3);">Escanea con tu celular o tablet</p>
+          </div>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSe71vePaPbtbnz6yAlWjYRs9sp5jnNnhTHjIG0_m19hI7subQ/viewform"
+            target="_blank" rel="noopener" class="btn-primary"
+            style="width: 100%; background: var(--accent); color: #fff; justify-content: center;">
+            Abrir formulario
+          </a>
+        </div>
+      </div>
+      <div style="max-width: 900px; margin: 0 auto;">
+        <div
+          style="margin-top: 2.5rem; padding: 1.75rem; border-radius: 16px; background: var(--surface); border: 1px solid var(--border);">
+          <h3
+            style="font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 1rem; color: var(--text); margin-bottom: 1.25rem; text-align: center;">
+            ✨ Lo que incluye tu registro</h3>
+          <div class="includes-grid">
+            <div class="include-item">
+              <div class="include-check"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg></div>
+              <div>
+                <div class="include-title">Acceso completo</div>
+                <div class="include-desc">Todas las actividades del evento</div>
+              </div>
+            </div>
+            <div class="include-item">
+              <div class="include-check"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg></div>
+              <div>
+                <div class="include-title">Mentoría experta</div>
+                <div class="include-desc">Guía de especialistas en IA</div>
+              </div>
+            </div>
+            <div class="include-item">
+              <div class="include-check"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg></div>
+              <div>
+                <div class="include-title">Networking</div>
+                <div class="include-desc">Conecta con otros participantes</div>
+              </div>
+            </div>
+            <div class="include-item">
+              <div class="include-check"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg></div>
+              <div>
+                <div class="include-title">Certificado</div>
+                <div class="include-desc">Reconocimiento oficial TECSUP</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+     FOOTER
+  ══════════════════════════════════════════ -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">EduHack 2025</div>
+          <p class="footer-tagline">"Educación Superior sin deserción estudiantil: El poder de los agentes de IA"</p>
+          <div class="social-links">
+            <a href="#" class="social-btn" aria-label="Facebook"><svg fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+              </svg></a>
+            <a href="#" class="social-btn" aria-label="Twitter"><svg fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+              </svg></a>
+            <a href="#" class="social-btn" aria-label="LinkedIn"><svg fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.474-2.237-1.776-2.237-1.089 0-1.735.733-2.020 1.446-.104.253-.131.606-.131.96v5.4h-3.554s.047-8.761 0-9.667h3.554v1.468c.456-.704 1.279-1.706 3.107-1.706 2.269 0 3.974 1.481 3.974 4.665v5.24zM5.337 9.433c-1.144 0-1.915-.758-1.915-1.707 0-.956.771-1.71 1.958-1.71 1.187 0 1.914.754 1.939 1.71 0 .949-.752 1.707-1.982 1.707zm1.581 11.019H3.656V9.786h3.262v10.666zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg></a>
+            <a href="#" class="social-btn" aria-label="Instagram"><svg fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="1.8">
+                <rect x="2" y="2" width="20" height="20" rx="5" />
+                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+              </svg></a>
+          </div>
         </div>
         <div>
-          <p style="font-size: 0.875rem; font-weight: 600; color: var(--text); margin-bottom: 0.3rem;">Â¿Sin acceso al formulario?</p>
-          <p style="font-size: 0.8rem; color: var(--text3);">Escanea con tu celular o tablet</p>
+          <div class="footer-col-title">Secciones</div>
+          <ul class="footer-links">
+            <li><a href="#hero">Inicio</a></li>
+            <li><a href="#desafios">Desafíos</a></li>
+            <li><a href="#premios">Premios</a></li>
+            <li><a href="#criterios">Criterios</a></li>
+            <li><a href="#bases">Bases</a></li>
+            <li><a href="#registro">Registro</a></li>
+          </ul>
         </div>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe71vePaPbtbnz6yAlWjYRs9sp5jnNnhTHjIG0_m19hI7subQ/viewform" target="_blank" rel="noopener" class="btn-primary" style="width: 100%; background: var(--accent); color: #fff; justify-content: center;">
-          Abrir formulario
-        </a>
+        <div>
+          <div class="footer-col-title">TECSUP</div>
+          <ul class="footer-links">
+            <li><a href="#">Carreras</a></li>
+            <li><a href="#">Admisión</a></li>
+            <li><a href="#">Campus Virtual</a></li>
+            <li><a href="#">Empleabilidad</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Noticias</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Contacto</div>
+          <div class="footer-contact-item">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path
+                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            <a href="mailto:podar@tecsup.edu.pe">podar@tecsup.edu.pe</a>
+          </div>
+          <div class="footer-contact-item">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path
+                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            <a href="tel:+51931983761">+51 931 983 761</a>
+          </div>
+          <div class="footer-contact-item">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            Lima · Arequipa · Trujillo
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2025 TECSUP · Todos los derechos reservados</p>
+        <div class="footer-legal">
+          <a href="#">Política de Privacidad</a>
+          <a href="#">Términos de Uso</a>
+        </div>
       </div>
     </div>
-    <div style="max-width: 900px; margin: 0 auto;">
-      <div style="margin-top: 2.5rem; padding: 1.75rem; border-radius: 16px; background: var(--surface); border: 1px solid var(--border);">
-        <h3 style="font-family: Syne, sans-serif; font-weight: 700; font-size: 1rem; color: var(--text); margin-bottom: 1.25rem; text-align: center;">ðŸŽ¯ Lo que incluye tu registro</h3>
-        <div class="includes-grid">
-          <div class="include-item">
-            <div class="include-check"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
-            <div><div class="include-title">Acceso completo</div><div class="include-desc">Todas las actividades del evento</div></div>
-          </div>
-          <div class="include-item">
-            <div class="include-check"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
-            <div><div class="include-title">MentorÃ­a experta</div><div class="include-desc">GuÃ­a de especialistas en IA</div></div>
-          </div>
-          <div class="include-item">
-            <div class="include-check"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
-            <div><div class="include-title">Networking</div><div class="include-desc">Conecta con otros participantes</div></div>
-          </div>
-          <div class="include-item">
-            <div class="include-check"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
-            <div><div class="include-title">Certificado</div><div class="include-desc">Reconocimiento oficial TECSUP</div></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  </footer>
 
-<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-     FOOTER
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
-<footer>
-  <div class="footer-inner">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <div class="footer-logo">EduHack 2025</div>
-        <p class="footer-tagline">"EducaciÃ³n Superior sin deserciÃ³n estudiantil: El poder de los agentes de IA"</p>
-        <div class="social-links">
-          <a href="#" class="social-btn" aria-label="Facebook"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
-          <a href="#" class="social-btn" aria-label="Twitter"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg></a>
-          <a href="#" class="social-btn" aria-label="LinkedIn"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.474-2.237-1.776-2.237-1.089 0-1.735.733-2.020 1.446-.104.253-.131.606-.131.96v5.4h-3.554s.047-8.761 0-9.667h3.554v1.468c.456-.704 1.279-1.706 3.107-1.706 2.269 0 3.974 1.481 3.974 4.665v5.24zM5.337 9.433c-1.144 0-1.915-.758-1.915-1.707 0-.956.771-1.71 1.958-1.71 1.187 0 1.914.754 1.939 1.71 0 .949-.752 1.707-1.982 1.707zm1.581 11.019H3.656V9.786h3.262v10.666zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
-          <a href="#" class="social-btn" aria-label="Instagram"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
-        </div>
-      </div>
-      <div>
-        <div class="footer-col-title">Secciones</div>
-        <ul class="footer-links">
-          <li><a href="#hero">Inicio</a></li>
-          <li><a href="#desafios">DesafÃ­os</a></li>
-          <li><a href="#premios">Premios</a></li>
-          <li><a href="#criterios">Criterios</a></li>
-          <li><a href="#bases">Bases</a></li>
-          <li><a href="#registro">Registro</a></li>
-        </ul>
-      </div>
-      <div>
-        <div class="footer-col-title">TECSUP</div>
-        <ul class="footer-links">
-          <li><a href="#">Carreras</a></li>
-          <li><a href="#">AdmisiÃ³n</a></li>
-          <li><a href="#">Campus Virtual</a></li>
-          <li><a href="#">Empleabilidad</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Noticias</a></li>
-        </ul>
-      </div>
-      <div>
-        <div class="footer-col-title">Contacto</div>
-        <div class="footer-contact-item">
-          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-          <a href="mailto:podar@tecsup.edu.pe">podar@tecsup.edu.pe</a>
-        </div>
-        <div class="footer-contact-item">
-          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-          <a href="tel:+51931983761">+51 931 983 761</a>
-        </div>
-        <div class="footer-contact-item">
-          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-          Lima Â· Arequipa Â· Trujillo
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p class="footer-copy">Â© 2025 TECSUP â€” Todos los derechos reservados</p>
-      <div class="footer-legal">
-        <a href="#">PolÃ­tica de Privacidad</a>
-        <a href="#">TÃ©rminos de Uso</a>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<script src="js/index.js"></script>
+  <script src="js/index.js"></script>
 </body>
+
 </html>
